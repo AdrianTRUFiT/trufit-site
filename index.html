@@ -3,13 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TRUFiT Site</title>
+    <title>TRUFiT Site — CSS Test</title>
+
+    <!-- CSS TEST: if this loads, background will be dark + text white -->
     <style>
-      body { font-family: Arial, sans-serif; padding: 24px; }
+      :root { color-scheme: dark; }
+      body{
+        margin:0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #05101a;
+        color: #fafafa;
+      }
+      .wrap{ min-height:100vh; display:flex; align-items:center; justify-content:center; padding:40px; }
+      .card{
+        width: min(820px, 100%);
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.14);
+        border-radius: 16px;
+        padding: 28px;
+      }
+      .pill{
+        display:inline-block;
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: rgba(22,46,69,0.55);
+        border: 1px solid rgba(255,255,255,0.16);
+        font-size: 13px;
+        letter-spacing: .3px;
+      }
+      h1{ margin: 14px 0 8px; font-size: 40px; line-height: 1.1; }
+      p{ margin: 0 0 10px; font-size: 18px; line-height: 1.5; opacity: .92; }
+      .ok{
+        margin-top: 18px;
+        padding: 12px 14px;
+        border-left: 4px solid #22c55e;
+        background: rgba(34,197,94,0.10);
+        border-radius: 10px;
+      }
+      code{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
     </style>
   </head>
   <body>
-    <h1>It deployed.</h1>
-    <p>If you can see this, Vercel + GitHub is working.</p>
+    <div class="wrap">
+      <div class="card">
+        <span class="pill">CSS TEST — should be dark blue</span>
+        <h1>TRUFiT Site</h1>
+        <p>If you see a <b>dark navy background</b> and <b>white text</b>, CSS is working on Vercel.</p>
+        <div class="ok">
+          ✅ Next: once this works, we’ll add a separate <code>style.css</code> file (Step 2) and link it.
+        </div>
+      </div>
+    </div>
   </body>
 </html>
